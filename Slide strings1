@@ -1,0 +1,25 @@
+package main
+
+//Peça ao usuário para digitar duas strings e retorne a concatenação das duas.
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	fmt.Print("Digite uma frase: ")
+	scanner.Scan()
+	frase1 := scanner.Text()
+
+	fmt.Println("Digite outra frase ")
+	scanner.Scan()
+	frase2 := scanner.Text()
+
+	s1 := frase1 + " " + frase2
+
+	fmt.Print("As frases concatenadas são ", s1)
+
+}
